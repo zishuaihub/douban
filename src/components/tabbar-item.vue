@@ -24,10 +24,23 @@
    * </m-tabbar-item>
    */
   export default{
-    props: ['id'],
+    props: {
+      'id': {
+        type:String,
+        default: ''
+      },
+      'isRouter': {
+        type:Boolean,
+        default:false
+      }
+    },
     methods:{
       goToRouter(){
-       this.$parent.$emit('input',this.id)
+       this.$parent.$emit('input',this.id);
+        if(this.isRouter){
+          //根据id跳转到对应的路由页面
+          this.$router.push(this.id)
+        }
       }
     },
     computed: {
