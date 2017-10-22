@@ -5,14 +5,19 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import App from './App'
 import router from './router'
+import axios from 'axios'
+import store from './store'
 
 Vue.use(MintUI)
 Vue.config.productionTip = false
+
+Vue.prototype.$http = axios
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })

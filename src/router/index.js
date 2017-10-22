@@ -5,6 +5,8 @@ import Tab1 from '../pages/tab1.vue'
 import Tab2 from '../pages/tab2.vue'
 import Tab3 from '../pages/tab3.vue'
 import Tab4 from '../pages/tab4.vue'
+import login from '../pages/login/login.vue'
+import userInfo from '../pages/userInfo/userInfo.vue'
 Vue.use(Router);
 
 export default new Router({
@@ -34,9 +36,22 @@ export default new Router({
           path: '/tab4',
           name: 'tab4',
           component: Tab4,
+        },
+        {
+          path:'/login',
+          name: 'login',
+          component: login
+        },
+        {
+          path:'/userInfo',
+          name: 'userInfo',
+          component: userInfo
         }
+
       ]
-    }
+    },
+
+
 
   ]
 })
